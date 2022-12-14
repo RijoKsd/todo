@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  flex-direction: column;
+  animation: animate 4s ease-in-out infinite alternate;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 500px;
+  margin-top: 50px;
+}
+.todo-title {
+  text-align: center;
+  font-size: 30px;
+}
+.todo-header {
+  margin: 30px 0 20px;
+  display: flex;
+}
+.todo-header input {
+  height: 42px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.todo-header button {
+  font-size: 18px;
+  height: 42px;
+  padding: 0 20px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+.todo-header button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.todo-items-list {
+  text-align: left;
+  list-style: none;
+  perspective: 1000px;
+}
+.todo-items-list li {
+  background-color: #ffac81;
+  background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+  padding: 10px 15px;
+  margin: 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  animation: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* animate background color */
+@keyframes animate {
+  from {
+    background-color: #ffac81;
+    background-image: linear-gradient(315deg, #ffac81 0%, #7ee8fa 74%);
+  }
+  to {
+    background-color: #ff928b;
+    background-image: linear-gradient(315deg, #ff928b 0%, #7ee8fa 74%);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: rotateX(60deg) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+  }
+}
+
+.slideOut {
+  transform: rotateX(60deg) translateY(-10px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.edit-btn,
+.trash-btn {
+  cursor: pointer;
+  background-color: white;
+  margin-top: 3px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+}
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(200, 200, 200);
+}
+footer p {
+  margin: 10px 0;
+  font-size: 16px;
+}
