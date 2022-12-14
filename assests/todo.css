@@ -34,6 +34,9 @@ body {
   font-size: 18px;
   outline: none;
   border: none;
+  /* border-radius: 5px; */
+  flex: 1;
+
 }
 .todo-header button {
   font-size: 18px;
@@ -45,6 +48,9 @@ body {
   border: none;
   outline: none;
   transition: 0.3s;
+  /* border-radius: 5px;
+  margin-left: 10px; */
+
 }
 .todo-header button:hover {
   background-color: rgba(0, 0, 0, 0.8);

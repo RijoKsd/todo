@@ -17,6 +17,10 @@ todoInput.addEventListener("keyup", (e) => {
 addBtn.addEventListener("click", () => {
   todoInputData = todoInput.value;
   todoInputDataArray.push(todoInputData);
+  // check input bar is empty or not
+  if (todoInputData === "") {
+    return alert("Please enter a valid input");
+  }
 
   // Setting value to local Storage
   setLocalStorage();
@@ -47,7 +51,20 @@ function edittodoItem(event) {
     let item = event.target.parentElement;
     //  item.innerText = editedValue;
     let spanEl = item.querySelector("span");
+
     spanEl.innerText = editedValue;
+    // Delete item from local storage when prssing trash button
+    // edit the value from local storage when pressing edit button and update the UI also with new value in local storage 
+    let index = todoInputDataArray.indexOf(item.innerText);
+    todoInputDataArray.splice(index, 1, editedValue);
+    setLocalStorage();
+    // buildUI(); 
+ 
+
+
+
+
+    
   }
 }
 
@@ -65,6 +82,8 @@ function buildUI() {
     }
     //create css for li
     li.style.cssText = "animation-name: slideIn;";
+ 
+ 
     todoItemList.append(li);
     // clear input
     todoInput.value = "";
