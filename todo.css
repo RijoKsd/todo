@@ -17,22 +17,22 @@ body{
     max-width: 500px;
     margin-top: 50px;
 }
-.kitchen-title{
+.todo-title{
     text-align: center;
     font-size: 30px;
 }
-.kitchen-header{
+.todo-header{
     margin: 30px 0 20px;
     display: flex;
 }
-.kitchen-header input{
+.todo-header input{
     height: 42px;
     padding: 10px;
     font-size: 18px;
     outline: none;
     border: none;
 }
-.kitchen-header button{
+.todo-header button{
     font-size: 18px;
     height: 42px;
     padding: 0 20px;
@@ -43,16 +43,16 @@ body{
     outline: none;
     transition: 0.3s;
 }
-.kitchen-header button:hover{
+.todo-header button:hover{
     background-color: rgba(0,0,0,0.8); 
 }
 
-.kitchen-items-list{
+.todo-items-list{
     text-align: left;
     list-style: none;
     perspective: 1000px;
 }
-.kitchen-items-list li{
+.todo-items-list li{
     background-color: #ffac81;
     background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
     padding: 10px 15px;
